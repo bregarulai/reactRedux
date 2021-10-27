@@ -27,7 +27,6 @@ const HomePage = (props) => {
 
     setUsers(response.data.data)
   }
-  console.log('USERS: ', users)
   useEffect(() => {
     fetchUsers()
   }, [])
