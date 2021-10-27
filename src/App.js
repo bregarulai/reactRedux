@@ -2,17 +2,22 @@ import './App.css'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import HomePage from './containers/HomePage'
+import UserPage from './containers/UserPage'
 
 function App() {
   return (
     <Router>
-      <Switch>
-        <Route exact path="/">
-          <div className="App">
+      <div className="App">
+        <Switch>
+          <Route exact path="/">
             <HomePage />
-          </div>
-        </Route>
-      </Switch>
+          </Route>
+          <Route exact path="/user/:userId">
+            <UserPage />
+          </Route>
+          <Route>404 NOT FOUND!</Route>
+        </Switch>
+      </div>
     </Router>
   )
 }
